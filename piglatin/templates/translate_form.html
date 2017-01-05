@@ -1,0 +1,37 @@
+<!doctype html>
+<title>Piglatin Translator</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='semantic.min.css') }}">
+<div class=page>
+    <p></p>
+    <div class="ui container segment">
+        <h1 class="ui header">Piglatin Translator</h1>
+        <div class="ui raised padded container segment">
+            <form action="{{ url_for('translate_phrase') }}" method=post class=translate-phrase>
+                <div class="row">
+                    <div class="ui small header">
+                        English Phrase
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ui action input">
+                        <input name=text type="text" placeholder="Enter phrase..." value="{{user_input}}">
+                        <button type=submit class="ui button">Translate</button>
+                    </div>
+                </div>
+                {% if translation != '' %}
+                <div class="ui divider"></div>
+                <div class="row">
+                    <div class="ui small header">
+                        Piglatin translation
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ui message">
+                        {{translation}}
+                    </div>
+                </div>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
