@@ -1,4 +1,8 @@
-Pig Latin Rules:
+## Overview
+This repository contains a python package to perform english to pig latin translations based on the [rules](#Pig Latin Rules) below.
+
+
+## Pig Latin Rules
 
 1. General rule: take the first letter of a word, move it to the end, and add "ay". Example: "hello" becomes "ellohay". 
 
