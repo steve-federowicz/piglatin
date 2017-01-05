@@ -11,6 +11,10 @@ def move_consonants(word):
     It also carries out the first half of the logic of rule #1 (e.g. moving the first letter)
         - General rule: take the first letter of a word, move it to the end, and add "ay".
         Example: "hello" becomes "ellohay".
+
+
+    word: A string containing only alphanumeric characters not starting with a vowel or qu.
+
     """
 
     consonants = []
@@ -28,7 +32,10 @@ def move_consonants(word):
 def translate_phrase(phrase):
     """
     Translate an entire phrase by splitting into individual words, calling translate_word()
-    for each, and then applying rules 4 and 5.
+    for each, and then applying rules 4 and 5 for capitalizatin and punctuation.
+
+    phrase: A string possibly containing a mix of alphanumeric characters and punctuation.
+
     """
     words = re.split(r"\W+", phrase)
     punctuation = re.findall(r"\W+", phrase)
@@ -58,7 +65,8 @@ def translate_word(word):
     Translate an individual word into the appropriate pig latin by applying rules
     1, 3, 6 and 7.
 
-    word: string
+    word: A string containing only alphanumeric characters.
+
     """
 
     if word[0] in 'aeiou':
