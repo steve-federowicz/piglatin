@@ -1,5 +1,5 @@
 """ Module to translate english into pig latin """
-import string
+import re
 
 def move_consonants(word):
     """
@@ -30,29 +30,27 @@ def translate_phrase(phrase):
     Translate an entire phrase by splitting into individual words, calling translate_word()
     for each, and then applying rules 4 and 5.
     """
-    words = phrase.split()
+    words = re.split(r"\W+", phrase)
+    punctuation = re.findall(r"\W+", phrase)
 
-    transformed_phrase = []
+    punctuation.append('')
 
-    for word in words:
+    transformed_phrase = ''
 
-        uppercase_flag = word[0].isupper()
-        word = word.lower()
+    for i, word in enumerate(words):
 
-        if word[-1] in string.punctuation:
-            punctuation = word[-1]
-            word = word[:-1]
-        else:
-            punctuation = ''
+        if word != '':
+            uppercase_flag = word[0].isupper()
+            word = word.lower()
 
-        word = translate_word(word)
+            word = translate_word(word)
 
-        if uppercase_flag:
-            word = word.capitalize()
+            if uppercase_flag:
+                word = word.capitalize()
 
-        transformed_phrase.append(word + punctuation)
+        transformed_phrase += word + punctuation[i]
 
-    return ' '.join(transformed_phrase)
+    return transformed_phrase
 
 
 def translate_word(word):
@@ -85,7 +83,8 @@ def main():
 
     parser = argparse.ArgumentParser(description="Translate english to piglatin")
 
-    parser.add_argument("english_phrase", type=str, help="One or more words in sentence form.")
+    parser.add_argument("english_phrase", type=str,
+                        help="One or more words in sentence form. Single quotes required.")
 
     args = parser.parse_args()
 

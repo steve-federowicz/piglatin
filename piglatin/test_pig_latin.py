@@ -1,6 +1,6 @@
 """ Unit test for piglatin translation """
 
-import translator
+from piglatin import translator
 
 def test_move_consonants():
     """
@@ -35,10 +35,23 @@ def test_translate_phrase():
                     ('quickly and quietly', 'icklyquay andway ietlyquay'),
                     ('eat apples', 'eatway applesway'),
                     ('Hello world', 'Ellohay orldway'),
-                    ('Hello, world!', 'Ellohay, orldway!')]
+                    ('Hello, world!', 'Ellohay, orldway!'),
+                    ('Hello, world!!', 'Ellohay, orldway!!'),
+                    ('Hello , world!', 'Ellohay , orldway!'),
+                    ('#Hello , #world!', '#Ellohay , #orldway!'),
+                    ('Hello, world !', 'Ellohay, orldway !')]
 
     for english, piglatin in phrase_pairs:
         assert piglatin == translator.translate_phrase(english)
 
 
+def test_edge_cases():
+    """
+    Check a few UI edge cases
+    """
 
+    edge_cases = [(',', ','),
+                  (', ,', ', ,')]
+
+    for english, piglatin in edge_cases:
+        assert piglatin == translator.translate_phrase(english)
