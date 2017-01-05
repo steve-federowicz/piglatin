@@ -1,4 +1,25 @@
-Pig Latin Rules:
+## Overview
+This repository contains a python package to perform english to pig latin translations based on the [rules](#pig-latin-rules) below.
+
+If you would like to check out a simple UI to run the code go here http://35.165.183.118:5000.  The install below will create an executable. Optionally, you can start the server locally.
+
+## Installation
+```
+git clone https://github.com/steve-federowicz/piglatin.git
+pip install ./piglatin
+```
+## Usage
+```
+piglatin 'Hello, World!'
+```
+
+Optionally, you can run the flask server via the following commands and then access the web UI locally at localhost:5000
+```
+export FLASK_APP=$(pwd)/piglatin/piglatin/server.py
+flask run
+```
+
+## Pig Latin Rules
 
 1. General rule: take the first letter of a word, move it to the end, and add "ay". Example: "hello" becomes "ellohay". 
 
