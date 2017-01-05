@@ -4,13 +4,24 @@ This repository contains a python package to perform english to pig latin transl
 If you would like to check out a simple UI to run the code go here http://35.165.183.118:5000.  The install below will create an executable. Optionally, you can start the server locally.
 
 ## Installation
+
+### OSX and Linux
 ```
 git clone https://github.com/steve-federowicz/piglatin.git
 pip install ./piglatin
 ```
 ## Usage
+
+### From command line
 ```
 piglatin 'Hello, World!'
+```
+
+### Via python API
+```
+from piglatin import translator
+
+translator.translate_phrase('Hello, World!')
 ```
 
 Optionally, you can run the flask server via the following commands and then access the web UI locally at localhost:5000
