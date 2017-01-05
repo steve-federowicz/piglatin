@@ -1,6 +1,16 @@
 ## Overview
 This repository contains a python package to perform english to pig latin translations based on the [rules](#pig-latin-rules) below.
 
+If you would like to check out a simple UI to run the code go here.  The install below will also spawn a local server available at localhost:5000.
+
+## Installation and usage
+```
+git clone 
+pip install ./piglatin
+piglatin "Hello, World!"
+
+
+```
 
 ## Pig Latin Rules
 
