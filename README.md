@@ -10,7 +10,7 @@ pip install ./piglatin
 ```
 ## Usage
 ```
-piglatin --translate 'Hello, World!'
+piglatin 'Hello, World!'
 ```
 
 Optionally, you can run the flask server via the following commands and then access the web UI locally at localhost:5000
