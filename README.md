@@ -9,8 +9,17 @@ git clone https://github.com/steve-federowicz/piglatin.git
 pip install ./piglatin
 ```
 ## Usage
+
+### From command line
 ```
 piglatin 'Hello, World!'
+```
+
+### Via python API
+```
+from piglatin import translator
+
+translator.translate_phrase('Hello, World!')
 ```
 
 Optionally, you can run the flask server via the following commands and then access the web UI locally at localhost:5000
