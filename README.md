@@ -15,7 +15,7 @@ piglatin --translate 'Hello, World!'
 
 Optionally, you can run the flask server via the following commands and then access the web UI locally at localhost:5000
 ```
-export FLASK_APP=/pathway_generator/src/server.py 
+export FLASK_APP=$(pwd)/piglatin/piglatin/server.py
 flask run
 ```
 
