@@ -1,5 +1,5 @@
 ## Overview
-This repository contains a python package to perform english to pig latin translations based on the [rules](#Pig Latin Rules) below.
+This repository contains a python package to perform english to pig latin translations based on the [rules](#pig-latin-rules) below.
 
 
 ## Pig Latin Rules
