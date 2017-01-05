@@ -5,7 +5,7 @@ If you would like to check out a simple UI to run the code go here http://35.165
 
 ## Installation
 ```
-git clone 
+git clone https://github.com/steve-federowicz/piglatin.git
 pip install ./piglatin
 ```
 ## Usage
