@@ -1,7 +1,7 @@
 ## Overview
 This repository contains a python package to perform english to pig latin translations based on the [rules](#pig-latin-rules) below.
 
-If you would like to check out a simple UI to run the code go here http://35.165.183.118:5000.  The install below will create an executable. Optionally, you can start the server locally.
+The install below will create an executable and you can then start the server locally.
 
 ## Installation
 
